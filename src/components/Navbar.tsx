@@ -31,9 +31,9 @@ export const Navbar = () => {
   return (
     <header className="sticky top-4 z-10 container mt-6 h-16">
       <nav className="flex h-full items-center justify-between rounded-xl border border-gray-200 bg-white/30 px-5 shadow-xs backdrop-blur-lg backdrop-filter">
-        <div className="">
+        <Link to="/">
           <span className="text-lg font-bold">Preston Febis</span>
-        </div>
+        </Link>
         <div className="flex gap-4">
           {links.map(({ component, link }, i) => (
             <Button asChild variant="ghost" key={i}>

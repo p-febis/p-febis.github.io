@@ -1,14 +1,29 @@
-import { StrictMode } from "react";
+import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router/dom";
 import { createBrowserRouter } from "react-router";
 import { LandingPage } from "./features/LandingPage/components/LandingPage";
 
+const ProjectsPage = React.lazy(() => import("@/features/ProjectsPage/components/ProjectsPage.tsx"))
+const ComingSoon = React.lazy(() => import("@/components/ComingSoon.tsx"))
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LandingPage />,
+  },
+  {
+    path: "/projects",
+    element: <ComingSoon />,
+  },
+  {
+    path: "/blog",
+    element: <ComingSoon />,
+  },
+  {
+    path: "/about",
+    element: <ComingSoon />,
   },
 ]);
 
