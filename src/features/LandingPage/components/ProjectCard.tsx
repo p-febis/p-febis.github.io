@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from "react";
-import { Github } from "lucide-react";
+import { GithubIcon } from "lucide-react";
 
 import {
   Card,
@@ -23,7 +23,9 @@ export const ProjectCard = ({
   isWide?: boolean;
 }>) => {
   return (
-    <Card className={isWide ? "col-span-2" : "col-span-1"}>
+    <Card
+      className={`transition hover:-translate-y-2 ${isWide ? "col-span-2" : "col-span-1"}`}
+    >
       <CardHeader>
         <div className="inline-flex gap-3">
           {iconsSource.map((source, i) => (
@@ -38,7 +40,7 @@ export const ProjectCard = ({
       <CardFooter>
         <Button asChild>
           <Link to={githubLink} target="_blank" rel="noopener noreferrer">
-            <Github />
+            <GithubIcon />
             Source Code
           </Link>
         </Button>
