@@ -5,10 +5,7 @@ import GraphQLLogo from "@/assets/icons/graphql.svg";
 import GoLogo from "@/assets/icons/go.svg";
 import PostgresLogo from "@/assets/icons/postgresql.svg";
 
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const icons: { alt: string; src: string }[] = [
   { alt: "NextJs", src: NextJsLogo },
@@ -16,7 +13,7 @@ const icons: { alt: string; src: string }[] = [
   { alt: "TypeScript", src: TypeScriptLogo },
   { alt: "Go", src: GoLogo },
   { alt: "GraphQL", src: GraphQLLogo },
-  { alt: "PostgreSQL", src: PostgresLogo }
+  { alt: "PostgreSQL", src: PostgresLogo },
 ];
 
 export const AboutMe = () => {
@@ -24,16 +21,23 @@ export const AboutMe = () => {
     <section className="space-y-4">
       <h2 className="text-2xl font-bold">About Me</h2>
 
-        <Card className="w-full">
-          <CardContent className="flex flex-col gap-4 items-center">
-            <span className="font-semibold text-lg">My Skills</span>
-            <div className="inline-flex gap-3">
-              {icons.map(({alt, src}, i) => (
-                <img src={src} alt={alt} title={alt} width={48} height={48}  key={i} />
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+      <Card className="w-full">
+        <CardContent className="flex flex-col items-center gap-4">
+          <span className="text-lg font-semibold">My Skills</span>
+          <div className="inline-flex gap-3">
+            {icons.map(({ alt, src }, i) => (
+              <img
+                src={src}
+                alt={alt}
+                title={alt}
+                width={48}
+                height={48}
+                key={i}
+              />
+            ))}
+          </div>
+        </CardContent>
+      </Card>
     </section>
   );
 };
