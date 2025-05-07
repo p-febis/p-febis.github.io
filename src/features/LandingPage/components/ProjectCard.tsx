@@ -25,14 +25,14 @@ export const ProjectCard = ({
   return (
     <Card className={isWide ? "col-span-2" : "col-span-1"}>
       <CardHeader>
-      <div className="inline-flex gap-3">
-        {iconsSource.map((source, i) => (
-          <img src={source} key={i} width={32} height={32} />
-        ))}
-      </div>
+        <div className="inline-flex gap-3">
+          {iconsSource.map((source, i) => (
+            <img src={source} key={i} width={32} height={32} />
+          ))}
+        </div>
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
-        <span className="font-bold text-2xl">{title}</span>
+        <span className="text-2xl font-bold">{title}</span>
         {children}
       </CardContent>
       <CardFooter>
