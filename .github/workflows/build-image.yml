@@ -28,7 +28,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/portfolio
+          images: ghcr.io/p-febis/portfolio
       - name: Build and push Docker image
         id: push
         uses: docker/build-push-action@v6
@@ -40,6 +40,6 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v2
         with:
-          subject-name: ghcr.io/${{ env.IMAGE_NAME }}
+          subject-name: ghcr.io/p-febis/portfolio
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
