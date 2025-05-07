@@ -5,7 +5,6 @@ import { RouterProvider } from "react-router/dom";
 import { createBrowserRouter } from "react-router";
 import { LandingPage } from "./features/LandingPage/components/LandingPage";
 
-const ProjectsPage = React.lazy(() => import("@/features/ProjectsPage/components/ProjectsPage.tsx"))
 const ComingSoon = React.lazy(() => import("@/components/ComingSoon.tsx"))
 
 const router = createBrowserRouter([
