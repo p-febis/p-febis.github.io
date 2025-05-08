@@ -3,26 +3,43 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router/dom";
 import { createBrowserRouter } from "react-router";
-import { LandingPage } from "./features/LandingPage/components/LandingPage";
+import { Layout } from "@/components/Layout";
 
-const ComingSoon = React.lazy(() => import("@/components/ComingSoon.tsx"))
+const LandingPage = React.lazy(
+  () => import("./features/LandingPage/components/LandingPage"),
+);
+const ProjectsPage = React.lazy(
+  () => import("./features/ProjectsPage/components/ProjectsPage"),
+);
+const AboutPage = React.lazy(
+  () => import("./features/AboutPage/components/AboutPage"),
+);
+const BlogPage = React.lazy(
+  () => import("./features/BlogPage/components/BlogPage"),
+);
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <LandingPage />,
-  },
-  {
-    path: "/projects",
-    element: <ComingSoon />,
-  },
-  {
-    path: "/blog",
-    element: <ComingSoon />,
-  },
-  {
-    path: "/about",
-    element: <ComingSoon />,
+    path: "",
+    Component: Layout,
+    children: [
+      {
+        path: "/",
+        Component: LandingPage,
+      },
+      {
+        path: "/projects",
+        Component: ProjectsPage,
+      },
+      {
+        path: "/blog",
+        Component: BlogPage,
+      },
+      {
+        path: "/about",
+        Component: AboutPage,
+      },
+    ],
   },
 ]);
 

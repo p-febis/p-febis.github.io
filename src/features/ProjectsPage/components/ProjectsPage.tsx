@@ -1,10 +1,18 @@
-import { Layout } from "@/components/Layout";
+import { TextHeader } from "@/components/TextHeader";
+import { ShowcasedProjects } from "./ShowcasedProjects";
 
 const ProjectsPage = () => {
   return (
-    <Layout>
-    </Layout>
-  )
-}
+    <>
+      <TextHeader title="My Projects">
+        <p className="text-muted-foreground text-xl">
+          Showcasing technical skills and problem-solving through development
+          projects.
+        </p>
+      </TextHeader>
+      <ShowcasedProjects />
+    </>
+  );
+};
 
 export default ProjectsPage;

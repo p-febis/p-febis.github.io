@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from "react";
-import { GithubIcon } from "lucide-react";
+import { GithubIcon, Newspaper } from "lucide-react";
 
 import {
   Card,
@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router";
+import type { Project } from "@/lib/projects";
 
 export const ProjectCard = ({
   children,
@@ -16,12 +17,9 @@ export const ProjectCard = ({
   title,
   githubLink,
   isWide,
-}: PropsWithChildren<{
-  iconsSource: string[];
-  title: string;
-  githubLink: string;
-  isWide?: boolean;
-}>) => {
+  blogSlug,
+  showBlog,
+}: PropsWithChildren<Omit<Project, "description">>) => {
   return (
     <Card
       className={`transition hover:-translate-y-2 ${isWide ? "col-span-2" : "col-span-1"}`}
@@ -37,13 +35,23 @@ export const ProjectCard = ({
         <span className="text-2xl font-bold">{title}</span>
         {children}
       </CardContent>
-      <CardFooter>
+      <CardFooter
+        className={`${blogSlug && showBlog ? "justify-between" : ""}`}
+      >
         <Button asChild>
           <Link to={githubLink} target="_blank" rel="noopener noreferrer">
             <GithubIcon />
             Source Code
           </Link>
         </Button>
+        {blogSlug && showBlog ? (
+          <Button className="bg-purple-500 hover:bg-purple-500/90" asChild>
+            <Link to={`/blog/${blogSlug}`}>
+              <Newspaper />
+              Blog Post
+            </Link>
+          </Button>
+        ) : null}
       </CardFooter>
     </Card>
   );

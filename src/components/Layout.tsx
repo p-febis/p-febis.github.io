@@ -1,12 +1,14 @@
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
-import type { PropsWithChildren } from "react";
+import { Outlet } from "react-router";
 
-export const Layout = ({ children }: PropsWithChildren) => {
+export const Layout = () => {
   return (
     <div className="container space-y-8 p-4">
       <Navbar />
-      <div className="min-h-screen space-y-8">{children}</div>
+      <div className="min-h-screen space-y-8">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

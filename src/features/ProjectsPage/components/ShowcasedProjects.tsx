@@ -1,13 +1,12 @@
 import { projects } from "@/lib/projects.ts";
 import { ProjectCard } from "../../../components/ProjectCard.tsx";
 
-export const FeaturedProjects = () => {
+export const ShowcasedProjects = () => {
   return (
     <section className="space-y-4">
-      <h2 className="text-2xl font-bold">Featured Projects</h2>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+      <div className="grid grid-cols-4 gap-4">
         {projects.map(({ description, ...project }, i) => (
-          <ProjectCard key={i} {...project} showBlog={false}>
+          <ProjectCard key={i} {...project} showBlog={true} isWide={true}>
             {description}
           </ProjectCard>
         ))}
