@@ -8,7 +8,7 @@ const BlogPage = () => {
   return (
     <>
       <TextHeader title="Blog" />
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid gap-4 md:grid-cols-3">
         {blogs.map((blog) => (
           <BlogDisplayCard blog={blog} key={blog.slug} />
         ))}
