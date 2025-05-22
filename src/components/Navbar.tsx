@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { GithubIcon } from "lucide-react";
 import type { ReactNode } from "react";
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 type Link = {
   component: ReactNode | string;
   link: string;
@@ -34,12 +41,24 @@ export const Navbar = () => {
         <Link to="/">
           <span className="text-lg font-bold">Preston Febis</span>
         </Link>
-        <div className="flex gap-4">
+        <div className="hidden gap-4 md:flex">
           {links.map(({ component, link }, i) => (
             <Button asChild variant="ghost" key={i}>
               <Link to={link}>{component}</Link>
             </Button>
           ))}
+        </div>
+        <div className="relative flex md:hidden">
+          <DropdownMenu>
+            <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+            <DropdownMenuContent className="md:hidden">
+              {links.map(({ component, link }, i) => (
+                <DropdownMenuItem asChild key={i}>
+                  <Link to={link}>{component}</Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </nav>
     </header>
