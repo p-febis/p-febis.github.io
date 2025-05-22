@@ -22,9 +22,9 @@ export const AboutMe = () => {
       <h2 className="text-2xl font-bold">About Me</h2>
 
       <Card className="w-full">
-        <CardContent className="flex flex-col items-center gap-4">
+        <CardContent className="flex flex-col justify-center items-center gap-4">
           <span className="text-lg font-semibold">My Skills</span>
-          <div className="inline-flex gap-3">
+          <div className="flex flex-wrap gap-3">
             {icons.map(({ alt, src }, i) => (
               <img
                 src={src}

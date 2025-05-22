@@ -22,7 +22,7 @@ export const ProjectCard = ({
 }: PropsWithChildren<Omit<Project, "description">>) => {
   return (
     <Card
-      className={`transition hover:-translate-y-2 ${isWide ? "col-span-2" : "col-span-1"}`}
+      className={`transition hover:-translate-y-2 ${isWide ? "md:col-span-2" : "col-span-1"}`}
     >
       <CardHeader>
         <div className="inline-flex gap-3">
