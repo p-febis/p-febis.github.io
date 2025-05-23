@@ -28,7 +28,7 @@ export const projects: Project[] = [
     iconsSource: [NextJsLogo, TypeScriptLogo, GraphQLLogo],
     title: "Winkri",
     description:
-      "Winkri is a Saas ecommorce solution. It is not currently open source.",
+      "Winkri is a Saas ecommorce solution. It is multi vendor capable, using adapters and abstraction.",
     githubLink: "https://github.com/p-febis/winkri",
     showBlog: true,
     blogSlug: "winkri-commerce",
