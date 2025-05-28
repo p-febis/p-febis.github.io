@@ -24,7 +24,7 @@ const BlogDisplayPage = () => {
   return (
     <>
       <TextHeader title={blog.title} />
-      <main dangerouslySetInnerHTML={{ __html: blog.content }}></main>
+      <main className="prose lg:prose-xl mx-auto" dangerouslySetInnerHTML={{ __html: blog.content }}></main>
     </>
   );
 };
