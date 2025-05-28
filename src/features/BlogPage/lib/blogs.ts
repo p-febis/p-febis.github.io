@@ -31,6 +31,13 @@ const blogs: Blog[] = Object.entries(blogFiles).map(([path, content]) => {
     headerImage: attributes?.headerImage ?? "",
     content: html,
   };
+}).sort((a,b) => {
+
+  const dateA = new Date(a.date).getTime();
+  const dateB = new Date(b.date).getTime();
+
+  return (dateB - dateA);
+
 });
 
 export function getAllBlogs() {
