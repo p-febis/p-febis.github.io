@@ -45,7 +45,7 @@ export const projects: Project[] = [
     title: "Saleor Auth SDK",
     description:
       "I've also commited code to Saleor Auth SDK, this need arose when I was porting storefront to Next 15.",
-    githubLink: "https://github.com/saleor/storefront",
+    githubLink: "https://github.com/saleor/auth-sdk",
     isWide: true,
   },
 ];
