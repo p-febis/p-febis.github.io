@@ -2,7 +2,7 @@ import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router/dom";
-import { createBrowserRouter, Link } from "react-router";
+import { createHashRouter, Link } from "react-router";
 import { Layout } from "@/components/Layout";
 
 const LandingPage = React.lazy(
@@ -33,7 +33,7 @@ const BlogDisplayPage = React.lazy(
   () => import("./features/BlogPage/components/BlogDisplayPage"),
 );
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "",
     Component: Layout,
