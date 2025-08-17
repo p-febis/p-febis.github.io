@@ -1,1 +1,0 @@
-import{c as i,j as x}from"./index-Cyf0hJrc.js";const o=c=>{const t=i.c(5),{children:l,title:r}=c;let e;t[0]!==r?(e=x.jsx("h1",{className:"mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl",children:r}),t[0]=r,t[1]=e):e=t[1];let s;return t[2]!==l||t[3]!==e?(s=x.jsxs("div",{className:"text-center",children:[e,l]}),t[2]=l,t[3]=e,t[4]=s):s=t[4],s};export{o as T};
