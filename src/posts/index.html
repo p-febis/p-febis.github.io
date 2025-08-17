@@ -1,0 +1,22 @@
+---
+layout: layout.njk
+---
+
+<div class="h-svh flex flex-col justify-center px-6">
+  <h1 class="!mb-0">Blog</h1>
+
+  <div>
+    {%- for post in collections.posts | reverse %}
+    {% if post.url != "/posts/" %}
+    <article key={index} class="border-b border-gray-200 pb-6 last:border-b-0">
+      <a href="{{ post.url }}">
+	<h2 class="text-gray-900 lg:!mb-4">{{post.data.title}}</h2>
+      </a>
+      <time class="text-sm text-gray-500 mb-3 block">{{post.date}}</time>
+      <p class="text-gray-700 leading-relaxed">{{post.data.excerpt}}</p>
+    </article>
+    {% endif %}
+    {%- endfor %}
+  </div>
+  {% include 'back.njk'  %}
+</div>

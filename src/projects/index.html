@@ -1,0 +1,37 @@
+---
+layout: layout.njk
+title: Projects
+---
+
+<div class="h-svh flex flex-col items-center justify-center space-y-4">
+  <section class="w-full">
+    <h1>Projects</h1>
+  </section>
+
+  <div class="w-full space-y-4">
+
+    <div class="border border-gray-200 p-6 rounded-none">
+      <div class="flex justify-between items-start mb-3">
+	<h2 class="text-gray-900 !my-0">Theseus</h2>
+	<span class="text-gray-500 bg-gray-100 px-2 py-1">Completed</span>
+      </div>
+      <p class="text-gray-700 leading-relaxed mb-3">Theseus is an importer written for the saleor Ecommerce engine.</p>
+      <p class="text-sm text-gray-600">
+      <span class="text-gray-800">Tech:</span> Python, GraphQL
+      </p>
+    </div>
+
+    <div class="border border-gray-200 p-6 rounded-none">
+      <div class="flex justify-between items-start mb-3">
+	<h2 class="text-gray-900 !my-0">Sula ERP</h2>
+	<span class="text-white bg-green-400 px-2 py-1">In development</span>
+      </div>
+      <p class="text-gray-700 leading-relaxed mb-3">Sula is an ERP/CRM for the Surinamse market.</p>
+      <p class="text-sm text-gray-600">
+      <span class="text-gray-800">Tech:</span> Node.js, React, Nest.js
+      </p>
+    </div>
+  </div>
+  {% include 'back.njk'  %}
+</div>
+

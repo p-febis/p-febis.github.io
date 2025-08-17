@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+    --font-sans: "Inter", sans-serif; 
+}
+
+:root {
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+}
+
+@theme {
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+}
